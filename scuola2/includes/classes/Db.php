@@ -85,6 +85,6 @@ class Db{
     {
         $this->dns = "mysql:host=localhost;dbname=scuola_db";
         $this->username = "root";
-        $this->psw = "VVJ.eaLve1n<";
+        $this->psw = "";
     }
 }
