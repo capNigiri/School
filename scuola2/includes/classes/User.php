@@ -15,7 +15,7 @@ class User {
         return $this->id;
     }
     
-    function __construct($name,$surname,$id,$role,$email,$psw) {
+    public function __construct($name,$surname,$id,$role,$email,$psw) {
         $this->name=$name;
         $this->surname=$surname;
         $this->id=$id;

@@ -4,7 +4,7 @@ class Registro {
     private array $voti;
     private array $presenze;
     
-    function construct($matricola,$voti,$presenze) {
+    public function construct($matricola,$voti,$presenze) {
         $this->matricola=$matricola;
         $this->voti=$voti;
         $this->presenze=$presenze;
