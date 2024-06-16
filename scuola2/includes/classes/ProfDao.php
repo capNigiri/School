@@ -25,7 +25,7 @@ class ProfDao {
         
     }
     
-    function addPresenza($db,$id,$bool) {
+    public function addPresenza($db,$id,$bool) {
         $sql="INSERT INTO registro_presenze (id_utente,data,presenza)
                 VALUES (
                 :matricola,
@@ -38,7 +38,7 @@ class ProfDao {
         ]);
     }
     
-    function getVotiById($db,$id,$materia) {
+    public function getVotiById($db,$id,$materia) {
         $mat=$db->getIdMateriaByName($materia);
         $sql="SELECT voto,data,argomenti FROM registro_voti WHERE id_utente = :id AND id_materia = :materia";
         $stmt=$db->connectDb()->prepare($sql);
@@ -49,7 +49,7 @@ class ProfDao {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     }
-    function __construct($PDO) {
+    public function __construct($PDO) {
         $this->PDO=$PDO;
     }
 }
